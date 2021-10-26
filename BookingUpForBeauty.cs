@@ -1,6 +1,5 @@
 using System;
 using System.Globalization;
-using Microsoft.VisualStudio.TestPlatform.ObjectModel;
 
 static class Appointment
 {
