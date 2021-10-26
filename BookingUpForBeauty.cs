@@ -1,4 +1,6 @@
 using System;
+using System.Globalization;
+using Microsoft.VisualStudio.TestPlatform.ObjectModel;
 
 static class Appointment
 {
@@ -21,11 +23,14 @@ static class Appointment
 
     public static string Description(DateTime appointmentDate)
     {
-        throw new NotImplementedException("Please implement the (static) Appointment.Description() method");
+        return string.Format("You have an appointment on {0}.", appointmentDate.ToString("G",
+            CultureInfo.CreateSpecificCulture("en-US")));
     }
 
     public static DateTime AnniversaryDate()
     {
-        throw new NotImplementedException("Please implement the (static) Appointment.AnniversaryDate() method");
+        string day = "09/15/2021 00:00:00";
+        
+        return DateTime.Parse(day);
     }
 }
